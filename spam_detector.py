@@ -35,7 +35,9 @@ pred = model.predict(X_test_vec)
 print("Accuracy:", accuracy_score(y_test,pred))
 
 # test message
-msg = ["Congratulations! you won a free ticket"]
+# msg = ["Congratulations! you won a free ticket"]
+raw_msg = input("Enter msg : ")
+msg= [raw_msg]
 msg_vec = vectorizer.transform(msg)
 
 print("Spam Prediction:", model.predict(msg_vec))
